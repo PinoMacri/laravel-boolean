@@ -1,4 +1,4 @@
 @extends('layouts.main')
 @section('content')
-<h1>ciao uova</h1>
+<h1>Benvenuti nell'App di Uovo-Corporation</h1>
 @endsection
