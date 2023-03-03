@@ -13,7 +13,7 @@
                 <th scope="col">Sorpresa</th>
                 <th scope="col">Cioccolato</th>
                 <th scope="col">Dimensioni</th>
-                <th scope="col" class="text-center"></th>
+                <th scope="col"></th>
               </tr>
             </thead>
             <tbody>
