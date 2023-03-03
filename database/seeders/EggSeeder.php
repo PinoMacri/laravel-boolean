@@ -13,6 +13,11 @@ class EggSeeder extends Seeder
      */
     public function run(): void
     {
-        
+        $eggs = config("eggs");
+        foreach($eggs as $egg){
+            $new_egg = new Egg();
+            $new_egg->fill($egg);
+            $new_egg->save();
+        }
     }
 }
