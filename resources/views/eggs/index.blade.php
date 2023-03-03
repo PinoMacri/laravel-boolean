@@ -26,7 +26,11 @@
                 <td >{{$egg->size}}</td>
                 <td class="td-btn">
                     <button type="button" class="btn btn-warning">Modifica</button>
-                    <button type="button" class="btn btn-danger">Elimina</button>
+                    <form action="{{route("eggs.destroy", $egg->id)}}" method="POST">
+                      @csrf
+                      @method("DELETE")
+                      <button type="submit" class="btn btn-danger">Elimina</button>
+                    </form>
                 </td>
               </tr>
               @endforeach

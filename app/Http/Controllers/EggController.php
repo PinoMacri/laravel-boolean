@@ -65,6 +65,8 @@ class EggController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $egg=Egg::findOrFail($id);
+        $egg->delete();
+        return to_route("eggs.index")->with("delete", "L'Uovo è stato eliminato");
     }
 }

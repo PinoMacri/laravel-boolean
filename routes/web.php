@@ -20,3 +20,4 @@ Route::get('/',[HomeController::class,"index"])->name("home");
 Route::get('/eggs',[EggController::class,"index"])->name("eggs.index");
 Route::get('/eggs/create',[EggController::class,"create"])->name("eggs.create");
 Route::post('/eggs',[EggController::class,"store"])->name("eggs.store");
+Route::delete('/eggs/{egg}',[EggController::class,"destroy"])->name("eggs.destroy");
