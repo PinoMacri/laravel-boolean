@@ -41,7 +41,8 @@ class EggController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $egg=Egg::findOrFail($id);
+        return view("eggs.show", compact("egg"));
     }
 
     /**

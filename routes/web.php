@@ -23,3 +23,4 @@ Route::post('/eggs',[EggController::class,"store"])->name("eggs.store");
 Route::delete('/eggs/{egg}',[EggController::class,"destroy"])->name("eggs.destroy");
 Route::get('/eggs/{egg}/edit',[EggController::class,"edit"])->name("eggs.edit");
 Route::put('/eggs/{egg}',[EggController::class,"update"])->name("eggs.update");
+Route::get('/eggs/{id}',[EggController::class,"show"])->name("eggs.show");

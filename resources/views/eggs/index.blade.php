@@ -13,7 +13,7 @@
                 <th scope="col">Sorpresa</th>
                 <th scope="col">Cioccolato</th>
                 <th scope="col">Dimensioni</th>
-                <th scope="col">Azione</th>
+                <th scope="col" class="text-center"></th>
               </tr>
             </thead>
             <tbody>
@@ -24,13 +24,14 @@
                 <td >{{$egg->surprise}}</td>
                 <td >{{$egg->type_chocolate}}</td>
                 <td >{{$egg->size}}</td>
-                <td class="td-btn">
+                <td class="td-btn d-flex justify-content-end w-100">
                     <a class="btn btn-warning" href="{{route ("eggs.edit", $egg->id)}}">Modifica</a>
-                    <form class="d-inline" action="{{route("eggs.destroy", $egg->id)}}" method="POST">
+                    <form class="mx-4"  action="{{route("eggs.destroy", $egg->id)}}" method="POST">
                       @csrf
                       @method("DELETE")
                       <button type="submit" class="btn btn-danger">Elimina</button>
                     </form>
+                    <a  class="btn btn-primary" href="{{route ("eggs.show", $egg->id)}}">Visualizza</a>
                 </td>
               </tr>
               @endforeach
