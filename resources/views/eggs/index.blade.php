@@ -25,7 +25,7 @@
                 <td >{{$egg->type_chocolate}}</td>
                 <td >{{$egg->size}}</td>
                 <td class="td-btn">
-                    <button type="button" class="btn btn-warning">Modifica</button>
+                    <a class="btn btn-warning" href="{{route ("eggs.edit", $egg->id)}}">Modifica</a>
                     <form action="{{route("eggs.destroy", $egg->id)}}" method="POST">
                       @csrf
                       @method("DELETE")
